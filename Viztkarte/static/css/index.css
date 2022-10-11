@@ -1,75 +1,71 @@
 body{
-    background: #5D4157;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #A8CABA, #5D4157);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #A8CABA, #5D4157); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+background:linear-gradient(60deg,#16213E, #61A4BC, #FE7E6D, #E94560) ;
+background-size: 500%;
+animation:gradientAnimation 10s ease infinite ;
 }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  li,a{
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    font-size: 15px;
-    color: #fff;
-    text-decoration: none;
+@keyframes gradientAnimation {
+   0%{
+      background-position: 0% 50%;
+   }
+   50%{
+      background-position: 100% 50%;
+   }
+   100%{
+      background-position: 0% 50%;
+   }
 }
 
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+li,a{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  color: #fff;
+  text-decoration: none;
+}
 .site_top_menu{
-    margin-left: -100px;
-    margin-right: -8px;
-    margin-top: -10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #061c46;
-    padding: 20px 20px;
-    height: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #21485262;
+  padding: 20px 15px;
+  height: 0px;
 }
-
 .left_top{
-    list-style: none;
-
-}
-.right_top{
    list-style: none;
+
 
 }
 .left_top li{
-   display: inline-block;
-   padding: 0px 22px;
-}
-.right_top li{
-   display:inline-block;
-}
-.left_top li a{
-   transition: all 0.3s ease 0s;
-}
-.right_top li a{
-   transition: all 0.3s ease 0s;
-}
-.right_top li a:hover{
-   color: rgba(98, 7, 76, 0.307);
-}
-.left_top li a:hover{
-   color: rgba(253, 5, 191, 0.671);
+  display: inline-block;
+  padding: 0px 22px;
 }
 
-.gif{
-    opacity: 0.03;
-    width: 100vw;
-    margin-left: -10px;
-    height: 43.3vw;
+.left_top li a{
+  transition: all 0.3s ease 0s;
 }
+
+.left_top li a:hover{
+  color: chartreuse;
+}
+
+.right1{
+  margin-right: 12px;
+}
+
+/*site top*/
+
 
 .Logo{
-    padding-left: 5px;
-    padding: 0 20px;
-    font-size: 25px;
-    font-family: serif;
-    margin-left: 70px;
+  padding-left: 5px;
+  padding: 0 20px;
+  font-size: 18px;
+  font-weight: 300;
 }
+
