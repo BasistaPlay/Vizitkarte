@@ -1,21 +1,215 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'poppins', sans-serif;
+}
 
-
-.video{
-  margin-top: -500px;
-  margin-left: -10px;
-  left: 0;
-  width: 99vw;
-  height: 96vw;
-  filter: blur(2px);
-  display:flex;
+html body{
+  display: grid;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, #000000, #26121d, #451934, #671f4c, #8a2365, #b02580, #d7249c, #ff21b9);
+  background-repeat: repeat-y;
 }
 
 
-.overlay-content {
+nav{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 5px 0;
+}
+
+nav ul{
+  flex: 1;
+  text-align:right ;
+}
+
+nav ul li{
+  display: inline-block;
+  list-style: none;
+  margin: 10px 30px;
+}
+
+nav ul li a{
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+}
+
+nav ul li a::after{
+  content: '';
+  width: 0;
+  height: 3px;
   position: absolute;
-  top: 0;
-  left: 0;
-  background: rgba(4, 27, 37, 0.555);
-  width: 100vw;
-  height: 24.5vh;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  transition: width 0.3s;
+}
+
+nav ul li a:hover:after{
+  width: 50%;
+}
+
+.logo{
+  font-size: 32px;
+  margin-left: 25px;
+  font-family: Serif;
+  cursor: pointer;
+  color: #fff;
+}
+
+.text-box{
+  color: #fff;
+  position: absolute;
+  bottom: 8%;
+}
+
+.text-box p{
+  font-size: 50px;
+  font-weight: 600;
+  margin-left: 100px;
+}
+
+.text-box h1{
+  font-size: 190px;
+  line-height: 160px;
+  margin-left: 100px;
+  color: transparent;
+  -webkit-text-stroke:1px #fff ;
+  background: url(/Viztkarte/static/image/back.png);
+  -webkit-background-clip: text;
+  background-position: 0 0;
+  animation: back 20s linear infinite;
+}
+
+@keyframes back{
+  100%{
+    background-position: 2000px 0;
+  }
+}
+
+.text-box h2{
+  font-size: 130px;
+  line-height: 160px;
+  margin-left: 100px;
+}
+
+.text-box h3{
+  font-size: 40px;
+  font-weight: 500;
+  margin-left: 100px;
+}
+
+.text-box .row{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  margin-left: 100px;
+}
+
+.text-box a{
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  margin-right: 20px;
+  border: 2px solid #fff;
+}
+
+/* .social-icons{
+  position: absolute;
+  right: 2%;
+  bottom: 4%;
+}
+
+.social-icons img{
+  width: 40px;
+  display: block;
+  margin: 25px 5px;
+} */
+
+/* .wrapper{
+margin-left: 95%;
+margin-top: 30%;
+} */
+
+.wrapper .button{
+  display: flex block;
+  height: 60px;
+  width: 60px;
+  float: right;
+  overflow: hidden;
+  margin: 5px 0.5% 5px 90%;
+  background: #fff;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease-out;
+
+}
+
+.wrapper .button:nth-child(1):hover .icon{
+  background: #4267b2;
+}
+
+.wrapper .button:nth-child(2):hover .icon{
+  background: #E1306C;
+}
+
+.wrapper .button:nth-child(3):hover .icon{
+  background: #171a21;
+}
+
+.wrapper .button:nth-child(4):hover .icon{
+  background: #4267b2;
+}
+
+.wrapper .button:nth-child(1) span{
+  color: #4267b2;
+}
+
+.wrapper .button:nth-child(2) span{
+  color: #E1306C;
+}
+
+.wrapper .button:nth-child(3) span{
+  color: #171a21;
+}
+
+.wrapper .button:nth-child(4) span{
+  color: #333;
+}
+
+.wrapper .button:hover{
+  width: 200px;
+}
+.wrapper .button:hover .icon{
+  color: #fff;
+}
+.wrapper .button .icon{
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  border-radius: 50px;
+  box-sizing: border-box;
+  line-height: 60px;
+  transition: all 0.3s ease-out;
+}
+
+.wrapper .button .icon i{
+  font-size: 25px;
+  line-height: 60px;
+}
+
+.wrapper .button span{
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 60px;
+  margin-left: 10px;
 }
