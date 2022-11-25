@@ -5,9 +5,13 @@
 }
 
 html body{
-    background: url(/Viztkarte/static/image/backgroud.jpg) no-repeat center;
-    background-size: cover;
+        display: grid;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(90deg, #000000, #26121d, #451934, #671f4c, #8a2365, #b02580, #d7249c, #ff21b9);
+        background-repeat: repeat-y;
     padding: 100px 0;
+    animation: 1s ease-out 0s 1 slideInFromLeft;
 }
 
 
@@ -71,3 +75,22 @@ color: #ddd;
 .contact-form-btn:hover{
     background-color: #2980b9;
 }
+
+span {
+    content: "\2039";
+    color: #fff;
+    font-size: 50px;
+    position: absolute;
+    left: 40px;
+    top: 10px;
+    cursor: pointer;
+  }
+
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
